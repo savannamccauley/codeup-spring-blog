@@ -12,5 +12,21 @@ public class MathController {
     public int addition(@PathVariable int num1, @PathVariable int num2){
         return num1 +num2;
     }
+    @GetMapping("/subtract/{num1}/from/{num2}")
+    @ResponseBody
+    public int subtract(@PathVariable int num1, @PathVariable int num2){
+        return num1 * num2;
+    }
+    @GetMapping("/multiply/{num1}/and/{num2}")
+    @ResponseBody
+    public int multiply(@PathVariable int num1, @PathVariable int num2) {
+        return num1 * num2;
+    }
+
+    @GetMapping("/divide/{num1}/by/{num2}")
+    @ResponseBody
+    public int division(@PathVariable int num1, @PathVariable int num2) {
+        return num1 / num2;
+    }
 
 }
